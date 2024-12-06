@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "plugins": ["node-workspace", "cargo-workspace", "sentence-case"],
+  "plugins": ["cargo-workspace", "sentence-case"],
   "packages": {
     "packages/pkg-one": {
       "release-type": "node"
