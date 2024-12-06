@@ -13,6 +13,9 @@
     },
     "crates/crate-two": {
       "release-type": "rust"
+    },
+    ".": {
+      "release-type": "node"
     }
   }
 }
