@@ -1,0 +1,49 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      release_created: ${{ steps.release.outputs.release_created }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+
+  build-and-upload:
+    runs-on: macos-latest
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin
+      - run: cargo build --release --target aarch64-apple-darwin
+
+      - name: Determine Archive Name
+        run: |
+          echo "ARCHIVE=release-test-${{ needs.release.outputs.tag_name }}" >> $GITHUB_ENV
+
+      - name: Build Archive
+        run: |
+          tar -zcvf "$ARCHIVE.tar.gz" -C target/aarch64-apple-darwin/release release-test
+          shasum -a 256 "$ARCHIVE.tar.gz" > "$ARCHIVE.tar.gz.sha256"
+          echo "ASSET=$ARCHIVE.tar.gz" >> $GITHUB_ENV
+          echo "ASSET_SUM=$ARCHIVE.tar.gz.sha256" >> $GITHUB_ENV
+
+      - name: Upload Release Artifact
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ needs.release.outputs.tag_name }} ${{ env.ASSET }}
+          gh release upload ${{ needs.release.outputs.tag_name }} ${{ env.ASSET_SUM }}
