@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/lzt1008/release-test/compare/release-test-v0.3.1...release-test-v0.4.0) (2024-12-06)
+
+
+### Features
+
+* First commit ([6134b32](https://github.com/lzt1008/release-test/commit/6134b32b1122f9e660e3abf46fa84980b5e1853e))
+* **rust/crate-one:** Print three times ([cceba06](https://github.com/lzt1008/release-test/commit/cceba0682dd7eb8885208cd55208fad1d4c3c4ba))
+
 ## [0.3.0](https://github.com/lzt1008/release-test/compare/v0.2.4...v0.3.0) (2024-12-05)
 
 
