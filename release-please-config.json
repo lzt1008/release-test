@@ -28,7 +28,8 @@
       "components": [
         "node-pkg-one",
         "node-pkg-two"
-      ]
+      ],
+      "merge": false
     },
     {
       "type": "linked-versions",
@@ -36,7 +37,8 @@
       "components": [
         "rust-crate-one",
         "rust-crate-two"
-      ]
+      ],
+      "merge": false
     }
   ]
 }
