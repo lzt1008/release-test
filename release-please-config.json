@@ -10,10 +10,6 @@
     }
   },
   "plugins": [
-    {
-      "type": "cargo-workspace",
-      "merge": false
-    },
     "sentence-case"
   ]
 }
