@@ -24,10 +24,16 @@
     "sentence-case",
     {
       "type": "linked-versions",
-      "groupName": "my group",
+      "groupName": "node",
       "components": [
         "node-pkg-one",
-        "node-pkg-two",
+        "node-pkg-two"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "rust",
+      "components": [
         "rust-crate-one",
         "rust-crate-two"
       ]
