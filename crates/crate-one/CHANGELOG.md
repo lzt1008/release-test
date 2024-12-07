@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0](https://github.com/lzt1008/release-test/compare/rust-crate-one-v0.4.0...rust-crate-one@v0.5.0) (2024-12-07)
+
+
+### Features
+
+* First commit ([6134b32](https://github.com/lzt1008/release-test/commit/6134b32b1122f9e660e3abf46fa84980b5e1853e))
+* **rust/crate-one:** Print three times ([cceba06](https://github.com/lzt1008/release-test/commit/cceba0682dd7eb8885208cd55208fad1d4c3c4ba))
+
 ## [0.4.0](https://github.com/lzt1008/release-test/compare/pkgOne-v0.3.1...pkgOne-v0.4.0) (2024-12-07)
 
 
