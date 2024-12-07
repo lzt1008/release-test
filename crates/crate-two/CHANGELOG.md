@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/lzt1008/release-test/compare/rust-crate-two-v0.4.0...rust-crate-two@v0.5.0) (2024-12-07)
+
+
+### Features
+
+* First commit ([6134b32](https://github.com/lzt1008/release-test/commit/6134b32b1122f9e660e3abf46fa84980b5e1853e))
+
+
+### Bug Fixes
+
+* **crate-two:** Duplicate greeting ([45919b0](https://github.com/lzt1008/release-test/commit/45919b0a475339be0dcca3e4e462739fc7484726))
+
 ## [0.4.0](https://github.com/lzt1008/release-test/compare/pkgTwo-v0.3.1...pkgTwo-v0.4.0) (2024-12-07)
 
 
