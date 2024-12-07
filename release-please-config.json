@@ -1,16 +1,36 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "separate-pull-requests": true,
-  "release-type": "rust",
+  "include-v-in-tag": true,
   "packages": {
     "crates/crate-one": {
-      "component": "pkgOne"
+      "release-type": "rust",
+      "component": "rust-crate-one"
     },
     "crates/crate-two": {
-      "component": "pkgTwo"
+      "release-type": "rust",
+      "component": "rust-crate-two"
+    },
+    "packages/pkg-one": {
+      "release-type": "node",
+      "component": "node-pkg-one"
+    },
+    "packages/pkg-two": {
+      "release-type": "node",
+      "component": "node-pkg-two"
     }
   },
   "plugins": [
-    "sentence-case"
+    "sentence-case",
+    {
+      "type": "linked-versions",
+      "groupName": "my group",
+      "components": [
+        "node-pkg-one",
+        "node-pkg-two",
+        "rust-crate-one",
+        "rust-crate-two"
+      ]
+    }
   ]
 }
