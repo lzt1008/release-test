@@ -1,4 +1,6 @@
 {
   "crates/crate-one": "0.5.0",
-  "crates/crate-two": "0.5.0"
+  "crates/crate-two": "0.5.0",
+  "packages/pkg-one": "1.0.0",
+  "packages/pkg-two": "1.0.0"
 }
