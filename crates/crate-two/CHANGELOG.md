@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/lzt1008/release-test/compare/pkgTwo-v0.4.0...pkgTwo-v0.4.1) (2024-12-07)
+
+
+### Bug Fixes
+
+* **crate-two:** Duplicate greeting ([45919b0](https://github.com/lzt1008/release-test/commit/45919b0a475339be0dcca3e4e462739fc7484726))
+
 ## [0.4.0](https://github.com/lzt1008/release-test/compare/pkgTwo-v0.3.1...pkgTwo-v0.4.0) (2024-12-07)
 
 
